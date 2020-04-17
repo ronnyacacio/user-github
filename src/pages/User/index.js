@@ -17,6 +17,10 @@ import {
 } from './styles';
 
 export default class User extends Component {
+  static navigationOptions = ({ navigation }) => ({
+    title: navigation.getParam('user').name,
+  });
+
   static propTypes = {
     navigation: PropTypes.shape({
       getParam: PropTypes.func,

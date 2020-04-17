@@ -19,9 +19,9 @@ import {
 } from './styles';
 
 export default class Main extends Component {
-  static navigationOptions = {
-    title: 'Usuários',
-  };
+  // static navigationOptions = {
+  //   title: 'Usuáros',
+  // };
 
   static propTypes = {
     navigation: PropTypes.shape({

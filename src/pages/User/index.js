@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import api from '../../services/api';
 
 import {
@@ -16,6 +15,9 @@ import {
   Title,
   Author,
   Loading,
+  ViewEmpty,
+  IconEmpty,
+  TextEmpty,
 } from './styles';
 
 export default class User extends Component {
@@ -98,7 +100,7 @@ export default class User extends Component {
 
         {loading ? (
           <Loading />
-        ) : (
+        ) : stars.length !== 0 ? (
           <Stars
             data={stars}
             keyExtractor={(star) => String(star.id)}
@@ -117,6 +119,11 @@ export default class User extends Component {
               </Starred>
             )}
           />
+        ) : (
+          <ViewEmpty>
+            <TextEmpty>Nenhum favorito</TextEmpty>
+            <IconEmpty />
+          </ViewEmpty>
         )}
       </Container>
     );

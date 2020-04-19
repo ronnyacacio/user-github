@@ -1,5 +1,6 @@
 import styled from 'styled-components/native';
 import { RectButton } from 'react-native-gesture-handler';
+import Icon from 'react-native-vector-icons/Entypo';
 
 export const Container = styled.View`
   flex: 1;
@@ -90,4 +91,24 @@ export const Loading = styled.ActivityIndicator.attrs({
   justify-content: center;
   align-items: center;
   margin-top: 20px;
+`;
+
+export const ViewEmpty = styled.View`
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 90px;
+`;
+
+export const IconEmpty = styled(Icon).attrs({
+  name: 'emoji-sad',
+  color: '#7159c1',
+  size: 18,
+})`
+  margin-left: 10px;
+`;
+
+export const TextEmpty = styled.Text`
+  font-size: 13px;
+  color: #666;
 `;
